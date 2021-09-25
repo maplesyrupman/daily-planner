@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,11 +28,102 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <div class="container myContainer">
       <!-- Timeblocks go here -->
+      <div id="h9" class='row'>
+        <div class='time'> 9h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='9h' >Save</button>
+        </div>
+      </div>
+
+      <div id="h10" class='row'>
+        <div class='time'>10h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='10h' >Save</button>
+        </div>
+      </div>
+
+      <div id="h11" class='row'>
+        <div class='time'>11h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='11h'>Save</button>
+        </div>
+      </div>
+
+      <div id="h12" class='row'>        
+        <div class='time'>12h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='12h'>Save</button>
+        </div>
+      </div>
+
+      <div id="h13" class='row'>
+        <div class='time'>13h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='13h'>Save</button>
+        </div>
+      </div>
+      
+      <div id="h14" class='row'>
+        <div class='time'>14h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='14h'>Save</button>
+        </div>
+      </div>
+
+      <div id="h15" class='row'>
+        <div class='time'>15h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='15h'>Save</button>
+        </div>
+      </div>
+
+      <div id="h16" class='row'>
+        <div class='time'>16h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='16h'>Save</button>
+        </div>
+      </div>
+
+      <div id="h17" class='row'>
+        <div class='time'>17h</div>
+        <div class='block'>
+          <textarea id='9h-block' class='time-block'></textarea>
+        </div>
+        <div class='save'>
+          <button type='button' data-time='17h'>Save</button>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.23.0/index.min.js"></script>
+    <script type='module' src="./Assets/js/script.js"></script>
   </body>
 </html>
