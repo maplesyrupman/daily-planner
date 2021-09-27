@@ -3,9 +3,8 @@ const todaysDateEl = $('#todaysDate');
 let todaysDate = moment().format('dddd, MMMM Do YYYY');
 todaysDateEl.text(todaysDate);
 
-let currentHour = 12;
+let currentHour = moment().hour();
 let currentDay = moment().day();
-
 
 
 const blockStuff = (() => {
@@ -60,17 +59,8 @@ const blockStuff = (() => {
 const storage = (() => {
     const getBlocks = () => {
         if (!localStorage.getItem('blocks')) {
-            return [
-                ['9h-block', ''],
-                ['10h-block', ''],
-                ['11h-block', ''],
-                ['12h-block', ''],
-                ['13h-block', ''],
-                ['14h-block', ''],
-                ['15h-block', ''],
-                ['16h-block', ''],
-                ['17h-block', '']
-            ]
+            resetBlocks();
+            return JSON.parse(localStorage.getItem('blocks'));
         }
         return JSON.parse(localStorage.getItem('blocks'));
     }
@@ -99,7 +89,8 @@ const storage = (() => {
                 ['16h-block', ''],
                 ['17h-block', '']
             ]
-        ))
+        ));
+        localStorage.setItem('currentDay', JSON.stringify(moment().day()));
     }
 
     return {
@@ -115,11 +106,16 @@ containerEl.click(e => {
     }
 });
 
+
+
+
+if (JSON.parse(localStorage.getItem('currentDay')) != moment().day()) {
+    storage.resetBlocks();
+}
 blockStuff.addBlockText();
 blockStuff.styleBlocks(currentHour);
 
 setInterval(() => {
-    console.log(moment().hour(), currentHour);
     if (moment().hour() != currentHour) {
         blockStuff.styleBlocks(moment().hour());
         currentHour = moment().hour();
