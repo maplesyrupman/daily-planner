@@ -119,7 +119,6 @@ setInterval(() => {
     if (moment().hour() != currentHour) {
         blockStuff.styleBlocks(moment().hour());
         currentHour = moment().hour();
-        console.log('check');
     }
     if (moment().day() != currentDay) {
         storage.resetBlocks();
